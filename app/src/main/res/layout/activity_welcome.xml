@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:background="@color/colorBackground" android:id="@+id/layout_for_fragment" android:layout_height="match_parent" android:layout_width="match_parent" tools:context=".WelcomeActivity">
+
+    <androidx.cardview.widget.CardView android:layout_centerVertical="true" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/_10sdp" android:layout_marginLeft="@dimen/_10sdp" android:layout_marginRight="@dimen/_10sdp" android:layout_marginTop="@dimen/_10sdp" android:layout_width="match_parent" android:visibility="gone" app:cardCornerRadius="@dimen/_10sdp">
+        <LinearLayout android:id="@+id/sngur" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_15sdp" android:visibility="visible">
+
+            <TextView android:gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="Brought to you by" style="@style/LargeText"/>
+            <ImageView android:contentDescription="@string/image" android:id="@+id/sngurLogo" android:layout_height="wrap_content" android:layout_width="match_parent" android:src="@drawable/sngur"/>
+            <TextView android:gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="Press on the images to view more information" style="@style/MediumText"/>
+            <LinearLayout android:gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:contentDescription="@string/image" android:layout_height="@dimen/_40sdp" android:layout_marginEnd="@dimen/_10sdp" android:layout_width="@dimen/_40sdp" android:src="@drawable/fb_small"/>
+                <ImageView android:contentDescription="@string/image" android:layout_height="@dimen/_40sdp" android:layout_marginEnd="@dimen/_10sdp" android:layout_marginStart="@dimen/_10sdp" android:layout_width="@dimen/_40sdp" android:src="@drawable/ig_small"/>
+                <ImageView android:contentDescription="@string/image" android:layout_height="@dimen/_40sdp" android:layout_marginStart="@dimen/_10sdp" android:layout_width="@dimen/_40sdp" android:src="@color/colorGray"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

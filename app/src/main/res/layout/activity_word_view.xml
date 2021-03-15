@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:background="@color/colorBackground" android:id="@+id/screen" android:layout_height="match_parent" android:layout_width="match_parent" tools:context=".ui.activity.WordViewActivity">
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical">
+        <androidx.cardview.widget.CardView android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_10sdp" android:layout_marginRight="@dimen/_10sdp" android:layout_marginTop="@dimen/_15sdp" android:layout_width="match_parent" app:cardCornerRadius="@dimen/_10sdp">
+            <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
+                <!--WORD FROM-->
+                <LinearLayout android:id="@+id/wordFrom" android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="wrap_content" android:orientation="vertical" android:padding="@dimen/_15sdp" android:visibility="visible">
+                    <LinearLayout android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical">
+                        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
+                            <TextView android:background="@drawable/radiobackground" android:gravity="center" android:id="@+id/fromWordLanguage" android:layout_gravity="center_vertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:padding="@dimen/_3sdp" android:text="@string/activity_word_view_fromWordLanguage_text" android:textColor="@color/colorBlack" style="@style/MicroText"/>
+                            <ImageView android:contentDescription="@string/image" android:id="@+id/playAudioFromWord" android:layout_gravity="end" android:layout_height="@dimen/_25sdp" android:layout_weight="1" android:layout_width="@dimen/_25sdp" android:padding="@dimen/_2sdp" android:src="@drawable/ic_baseline_volume_off_24" android:visibility="visible" app:tint="@color/colorGray"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
+                            <LinearLayout android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="wrap_content" android:orientation="vertical">
+                                <TextView android:fontFamily="sans-serif-black" android:id="@+id/fromWord" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/activity_word_view_fromWord_text" style="@style/WordText"/>
+                                <TextView android:fontFamily="serif" android:id="@+id/wordTypeFromWord" android:layout_gravity="center_vertical" android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="match_parent" android:text="@string/activity_word_view_wordTypeFromWord_text" android:textColor="@color/colorBlack" android:textStyle="italic"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
+                        <ImageView android:contentDescription="@string/image" android:id="@+id/editFromWordItem" android:layout_height="@dimen/_20sdp" android:layout_width="@dimen/_20sdp" android:src="@drawable/ic_baseline_edit_24" android:visibility="gone" app:tint="@color/colorBlack"/>
+                        <TextView android:id="@+id/userNameFromWord" android:layout_gravity="center_vertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/activity_word_view_userNameFromWord_text"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp" android:layout_width="match_parent" android:orientation="horizontal">
+                        <ImageView android:contentDescription="@string/image" android:id="@+id/voteUpFromWord" android:layout_gravity="center_vertical" android:layout_height="@dimen/_15sdp" android:layout_marginStart="@dimen/_2sdp" android:layout_width="@dimen/_15sdp" android:src="@drawable/ic_baseline_thumb_up_24" app:tint="@color/colorAccent"/>
+                        <TextView android:id="@+id/noOfVotesFromWord" android:layout_gravity="center_vertical" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_8sdp" android:layout_width="wrap_content" android:text="@string/activity_word_view_noOfVotesFromWord_text" style="@style/SmallText"/>
+                        <ImageView android:contentDescription="@string/image" android:id="@+id/voteDownFromWord" android:layout_gravity="center_vertical" android:layout_height="@dimen/_15sdp" android:layout_marginStart="@dimen/_8sdp" android:layout_width="@dimen/_15sdp" android:src="@drawable/ic_baseline_thumb_down_24" app:tint="@color/colorGray"/>
+                        <ImageView android:contentDescription="@string/image" android:id="@+id/reportFromWord" android:layout_gravity="center_vertical" android:layout_height="@dimen/_15sdp" android:layout_marginStart="@dimen/_8sdp" android:layout_width="@dimen/_15sdp" android:src="@drawable/ic_baseline_report_24" android:visibility="visible" app:tint="@color/colorRed"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:background="@color/colorGray" android:gravity="center_vertical" android:id="@+id/wordDivider" android:layout_gravity="center_vertical" android:layout_height="@dimen/_80sdp" android:layout_width="@dimen/_2sdp" android:orientation="vertical" android:visibility="invisible"/>
+                <!--WORD TO-->
+                <LinearLayout android:id="@+id/wordTo" android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="wrap_content" android:orientation="vertical" android:padding="@dimen/_15sdp" android:visibility="invisible">
+                    <LinearLayout android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical">
+                        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
+                            <ImageView android:contentDescription="@string/image" android:id="@+id/playAudioToWord" android:layout_gravity="start|center_vertical" android:layout_height="@dimen/_25sdp" android:layout_weight="1" android:layout_width="@dimen/_25sdp" android:padding="@dimen/_2sdp" android:src="@drawable/ic_baseline_volume_off_24" android:visibility="visible" app:tint="@color/colorGray"/>
+                            <TextView android:background="@drawable/radiobackground" android:id="@+id/toWordLanguage" android:layout_gravity="end|center_vertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:padding="@dimen/_3sdp" android:text="@string/activity_word_view_toWordLanguage_text" android:textColor="@color/colorBlack" style="@style/MicroText"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
+                            <TextView android:fontFamily="sans-serif-black" android:gravity="end" android:id="@+id/toWord" android:layout_gravity="end" android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="wrap_content" android:text="@string/activity_word_view_toWord_text" style="@style/WordText"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView android:fontFamily="serif" android:gravity="end" android:id="@+id/wordTypeToWord" android:layout_gravity="end" android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="match_parent" android:text="@string/activity_word_view_wordTypeToWord_text" android:textColor="@color/colorBlack" android:textStyle="italic"/>
+                    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
+                        <ImageView android:contentDescription="@string/image" android:gravity="end" android:id="@+id/editToWordItem" android:layout_gravity="end" android:layout_height="@dimen/_20sdp" android:layout_weight="1" android:layout_width="@dimen/_20sdp" android:src="@drawable/ic_baseline_edit_24" android:visibility="gone" app:tint="@color/colorBlack"/>
+                        <TextView android:gravity="end" android:id="@+id/userNameToWord" android:layout_gravity="end|center_vertical" android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="wrap_content" android:text="@string/activity_word_view_userNameToWord_text"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:gravity="end" android:layout_gravity="end" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp" android:layout_weight="1" android:layout_width="match_parent" android:orientation="horizontal">
+                        <ImageView android:contentDescription="@string/image" android:id="@+id/voteUpToWord" android:layout_gravity="center_vertical" android:layout_height="@dimen/_15sdp" android:layout_marginStart="@dimen/_2sdp" android:layout_width="@dimen/_15sdp" android:src="@drawable/ic_baseline_thumb_up_24" app:tint="@color/colorAccent"/>
+                        <TextView android:id="@+id/noOfVotesToWord" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_8sdp" android:layout_width="wrap_content" android:text="@string/activity_word_view_noOfVotesToWord_text" style="@style/SmallText"/>
+                        <ImageView android:contentDescription="@string/image" android:id="@+id/voteDownToWord" android:layout_gravity="center_vertical" android:layout_height="@dimen/_15sdp" android:layout_marginStart="@dimen/_8sdp" android:layout_width="@dimen/_15sdp" android:src="@drawable/ic_baseline_thumb_down_24" app:tint="@color/colorGray"/>
+                        <ImageView android:contentDescription="@string/image" android:id="@+id/reportToWord" android:layout_gravity="center_vertical" android:layout_height="@dimen/_15sdp" android:layout_marginStart="@dimen/_8sdp" android:layout_width="@dimen/_15sdp" android:src="@drawable/ic_baseline_report_24" android:visibility="visible" app:tint="@color/colorRed"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+                <LinearLayout android:alpha="0.4" android:background="@color/colorGray" android:layout_height="@dimen/_1sdp" android:layout_marginEnd="@dimen/_22sdp" android:layout_marginStart="@dimen/_22sdp" android:layout_width="match_parent"/>
+            <TextView android:id="@+id/fromWordMeaning" android:layout_height="wrap_content" android:layout_width="match_parent" android:padding="@dimen/_15sdp" android:text="@string/activity_word_view_fromWordMeaning_text" android:textColor="@color/colorBlack" android:textStyle="italic" style="@style/MediumText"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- SIMILAR KHASI/GARO WORDS -->
+        <androidx.cardview.widget.CardView android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_10sdp" android:layout_marginRight="@dimen/_10sdp" android:layout_marginTop="@dimen/_15sdp" android:layout_width="match_parent" app:cardCornerRadius="@dimen/_10sdp">
+            <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_15sdp">
+                <TextView android:id="@+id/toWordsTitle" android:layout_height="wrap_content" android:layout_width="match_parent" android:padding="@dimen/_2sdp" android:text="@string/activity_word_view_toWordsTitle_text" android:textStyle="bold" style="@style/WordText"/>
+                <TextView android:id="@+id/noKhasiWords" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/no_similar_khasi_words_yet" android:textSize="@dimen/_12sdp"/>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/toWordsList" android:layout_height="match_parent" android:layout_width="match_parent" tools:itemCount="1" tools:listitem="@layout/recycler_item_translated_word"/>
+                <Button android:backgroundTint="@color/colorAccent" android:id="@+id/answerBtn" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/add_translation" android:textColor="@color/colorWhite" android:visibility="gone" tools:targetApi="lollipop" android:enabled="false"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView android:id="@+id/toGaroCard" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_10sdp" android:layout_marginRight="@dimen/_10sdp" android:layout_marginTop="@dimen/_15sdp" android:layout_width="match_parent" app:cardCornerRadius="@dimen/_10sdp">
+            <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_15sdp">
+                <TextView android:id="@+id/toGaroWordsTitle" android:layout_height="wrap_content" android:layout_width="match_parent" android:padding="@dimen/_2sdp" android:text="@string/similar_garo_words" android:textStyle="bold" style="@style/WordText"/>
+                <TextView android:id="@+id/noGaroWords" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/no_garo_words_yet" android:textSize="@dimen/_12sdp"/>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/toGaroWordsList" android:layout_height="match_parent" android:layout_width="match_parent" tools:itemCount="1" tools:listitem="@layout/recycler_item_translated_word"/>
+                <Button android:backgroundTint="@color/colorSecondary" android:id="@+id/answerGaroBtn" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/add_translation" android:textColor="@color/colorWhite" android:visibility="gone" tools:targetApi="lollipop"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <!--Sentences load from DB-->
+        <androidx.cardview.widget.CardView android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_10sdp" android:layout_marginRight="@dimen/_10sdp" android:layout_marginTop="@dimen/_15sdp" android:layout_width="match_parent" app:cardCornerRadius="@dimen/_10sdp">
+            
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

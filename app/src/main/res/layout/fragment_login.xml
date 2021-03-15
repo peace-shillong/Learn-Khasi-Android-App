@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:gravity="center" android:layout_height="match_parent" android:layout_margin="@dimen/_10sdp" android:layout_width="match_parent" android:orientation="vertical" tools:context=".ui.welcome.LoginFragment">
+    <LinearLayout android:gravity="center" android:id="@+id/linearLayout" android:layout_gravity="start" android:layout_height="wrap_content" android:layout_margin="@dimen/_10sdp" android:layout_marginEnd="@dimen/_13sdp" android:layout_marginStart="@dimen/_13sdp" android:layout_width="match_parent" android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView android:gravity="center" android:layout_gravity="center" android:layout_height="@dimen/_70sdp" android:layout_width="@dimen/_70sdp" android:src="@drawable/logo"/>
+
+        <TextView android:gravity="center" android:layout_gravity="center" android:layout_height="match_parent" android:layout_marginStart="@dimen/_5sdp" android:layout_width="wrap_content" android:text="@string/app_name" style="@style/LargeText"/>
+    </LinearLayout>
+    <LinearLayout android:backgroundTint="@color/colorGray" android:gravity="start" android:id="@+id/linearLayout2" android:layout_gravity="start" android:layout_height="@dimen/_5sdp" android:layout_marginBottom="@dimen/_10sdp" android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:background="@color/colorAccent" android:layout_height="match_parent" android:layout_weight="2" android:layout_width="wrap_content" tools:targetApi="lollipop"/>
+    </LinearLayout>
+    <TextView android:gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/welcome_fragment" style="@style/MediumText"/>
+
+    <com.google.android.gms.common.SignInButton android:id="@+id/signIn" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp" android:layout_width="match_parent"/>
+
+    <Button android:backgroundTint="@color/colorGray" android:id="@+id/skipSignin" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp" android:layout_width="match_parent" android:text="@string/fragment_login_skipSignin_text" android:textColor="@color/colorWhite"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="By pressing the Sign in Button you agree to our:"
+        android:gravity="center"
+      />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/privacy"
+            android:textStyle="bold|italic"
+            android:textColor="@color/colorAccent"
+            />
+        <TextView
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="and"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            />
+        <TextView
+            android:id="@+id/terms"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/terms"
+            android:textStyle="bold|italic"
+            android:textColor="@color/colorAccent"
+            />
+    </LinearLayout>
+</LinearLayout>

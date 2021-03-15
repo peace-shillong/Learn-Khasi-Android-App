@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.home.HomeFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/colorBackground" android:layout_height="match_parent" android:layout_marginBottom="@dimen/_22sdp" android:layout_width="match_parent" >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/view" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/_22sdp" android:layout_width="match_parent">
+
+    <TextView android:fontFamily="serif" android:id="@+id/text_home" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/_8sdp" android:layout_marginStart="@dimen/_8sdp" android:layout_marginTop="@dimen/_8sdp" android:layout_width="match_parent" android:text="@string/welcome" android:textAlignment="center" android:textColor="@color/colorBlack" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.011" style="@style/MediumText"/>
+
+    <androidx.cardview.widget.CardView android:id="@+id/donateHome" android:layout_height="wrap_content" android:layout_margin="@dimen/_5sdp" android:layout_width="match_parent" android:padding="@dimen/_5sdp" android:visibility="gone" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.498" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/text_home">
+        <LinearLayout android:background="@color/colorAccent" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_5sdp">
+            <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:text="The app aims at helping people find English-Khasi-Garo words and sentences online and currently we have reached our free monthly limit and some features might not work accurately. To help keep everything flowing smoothly we need your support.\n Help make the app and our service better by donating any amount towards running our server." android:textColor="@color/colorWhite"/>
+            <Button android:layout_height="wrap_content" android:layout_width="match_parent" android:onClick="visitDonateSite" android:text="Learn more" tools:ignore="OnClick"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView android:id="@+id/videoIntro" android:layout_height="wrap_content" android:layout_margin="@dimen/_5sdp" android:layout_width="match_parent" android:padding="@dimen/_5sdp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.498" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/donateHome">
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:onClick="watchIntroVideo" android:orientation="vertical" android:padding="@dimen/_5sdp" tools:ignore="OnClick">
+            <TextView android:gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="Learn how to use the app" android:textColor="@color/colorBlack" style="@style/SmallText"/>
+            <ImageView android:contentDescription="@string/image" android:layout_height="@dimen/_120sdp" android:layout_width="match_parent" android:src="@drawable/video" android:background="@color/colorBlack"/>
+            <Button android:background="@color/colorAccent" android:layout_height="wrap_content" android:layout_width="match_parent" android:onClick="watchIntroVideo" android:text="Watch Video" android:textColor="@color/colorWhite"/>
+            <TextView
+                android:id="@+id/quickTipText"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="@string/quick_tips"/>
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/quickTipImg"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:src="@drawable/sngur"
+                 />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView android:id="@+id/textView" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp" android:layout_width="wrap_content" android:text="@string/fragment_home_textView_text" android:textColor="@color/colorBlack" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.498" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/videoIntro" style="@style/SmallText"/>
+
+    <androidx.cardview.widget.CardView android:id="@+id/updateApp" android:layout_height="wrap_content" android:layout_margin="@dimen/_5sdp" android:layout_width="match_parent" android:padding="@dimen/_5sdp" android:visibility="gone" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.498" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView">
+        <LinearLayout android:background="@color/colorAccent" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_5sdp">
+            <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:text="A new version of the app is available" android:gravity="center" android:textColor="@color/colorWhite"/>
+            <TextView android:id="@+id/newFeatures" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="" android:gravity="center" android:textStyle="bold" android:textColor="@color/colorWhite"/>
+            <Button android:id="@+id/updateAppBtn" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/colorGold" android:textStyle="bold" android:text="UPDATE THE APP" tools:ignore="OnClick"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView android:id="@+id/usersCard" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/_24sdp" android:layout_marginEnd="@dimen/_10sdp" android:layout_marginStart="@dimen/_26sdp" android:layout_marginTop="@dimen/_10sdp" android:layout_weight="1" android:layout_width="match_parent" app:cardCornerRadius="@dimen/_5sdp" app:layout_constraintTop_toBottomOf="@+id/updateApp" tools:layout_editor_absoluteX="0dp">
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal" android:padding="@dimen/_5sdp">
+            <ImageView android:contentDescription="@string/image" android:layout_height="@dimen/_40sdp" android:layout_width="@dimen/_40sdp" android:src="@drawable/ic_baseline_account_circle"/>
+            <TextView android:id="@+id/noOfUsers" android:layout_gravity="center_vertical" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_10sdp" android:layout_width="wrap_content" android:text="@string/fragment_home_noOfUsers_text" style="@style/MediumText"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView android:id="@+id/lessonsCard" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/_10sdp" android:layout_marginStart="@dimen/_26sdp" android:layout_marginTop="@dimen/_10sdp" android:layout_weight="1" android:layout_width="match_parent" app:cardCornerRadius="@dimen/_5sdp" app:layout_constraintTop_toBottomOf="@+id/usersCard" tools:layout_editor_absoluteX="0dp">
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal" android:padding="@dimen/_5sdp">
+            <ImageView android:contentDescription="@string/image" android:layout_height="@dimen/_40sdp" android:layout_width="@dimen/_40sdp" android:src="@drawable/ic_baseline_menu_book_24"/>
+            <TextView android:id="@+id/noOfLessons" android:layout_gravity="center_vertical" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_10sdp" android:layout_width="wrap_content" android:text="@string/fragment_home_noOfLessons_text" style="@style/MediumText"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <LinearLayout android:id="@+id/twoCards" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_5sdp" app:layout_constraintTop_toBottomOf="@+id/lessonsCard">
+    <androidx.cardview.widget.CardView android:id="@+id/khasiWordCard" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/_24sdp" android:layout_marginStart="@dimen/_4sdp" android:layout_marginTop="@dimen/_5sdp" android:layout_weight="1" android:layout_width="match_parent" app:cardCornerRadius="@dimen/_5sdp" tools:layout_editor_absoluteX="0dp">
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal" android:padding="@dimen/_5sdp">
+            <ImageView android:contentDescription="@string/image" android:layout_height="@dimen/_40sdp" android:layout_width="@dimen/_40sdp" android:src="@drawable/ic_baseline_chat_bubble" app:tint="@color/colorAccent"/>
+            <TextView android:id="@+id/noOfKhasiWords" android:layout_gravity="center_vertical" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_10sdp" android:layout_width="wrap_content" android:text="@string/fragment_home_noOfKhasiWords_text" style="@style/MediumText"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+<!--app:layout_constraintTop_toBottomOf="@+id/khasiWordCard"-->
+    <androidx.cardview.widget.CardView android:id="@+id/englishWordCard" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/_24sdp" android:layout_marginStart="@dimen/_4sdp" android:layout_marginTop="@dimen/_5sdp" android:layout_weight="1" android:layout_width="match_parent" app:cardCornerRadius="@dimen/_10sdp" tools:layout_editor_absoluteX="0dp">
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal" android:padding="@dimen/_5sdp">
+            <ImageView android:contentDescription="@string/image" android:layout_height="@dimen/_40sdp" android:layout_width="@dimen/_40sdp" android:src="@drawable/ic_baseline_chat_bubble" app:tint="@color/colorPrimaryDark"/>
+            <TextView android:id="@+id/noOfEnglishWords" android:layout_gravity="center_vertical" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_10sdp" android:layout_width="wrap_content" android:text="@string/fragment_home_noOfEnglishWords_text" style="@style/MediumText"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <androidx.cardview.widget.CardView android:id="@+id/sentencesCard" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/_10sdp" android:layout_marginStart="@dimen/_26sdp" android:layout_marginTop="@dimen/_10sdp" android:layout_width="match_parent" app:cardCornerRadius="@dimen/_5sdp" app:layout_constraintTop_toBottomOf="@+id/garoWordCard" tools:layout_editor_absoluteX="0dp">
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal" android:padding="@dimen/_5sdp">
+            <ImageView android:contentDescription="@string/image" android:layout_height="@dimen/_40sdp" android:layout_width="@dimen/_40sdp" android:src="@drawable/ic_baseline_question_answer"/>
+            <TextView android:id="@+id/noOfKhasiSentences" android:layout_gravity="center_vertical" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_10sdp" android:layout_width="wrap_content" android:text="@string/fragment_home_noOfKhasiSentences_text" style="@style/MediumText"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView android:id="@+id/garoWordCard" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/_26sdp" android:layout_marginStart="@dimen/_6sdp" android:layout_marginTop="@dimen/_5sdp" android:layout_weight="1" android:layout_width="match_parent" app:layout_constraintTop_toBottomOf="@+id/twoCards" app:cardCornerRadius="@dimen/_10sdp" tools:layout_editor_absoluteX="0dp">
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal" android:padding="@dimen/_5sdp">
+            <ImageView android:contentDescription="@string/image" android:layout_height="@dimen/_40sdp" android:layout_width="@dimen/_40sdp" android:src="@drawable/ic_baseline_chat_bubble" app:tint="@color/colorPrimaryDark"/>
+            <TextView android:id="@+id/noOfGaroWords" android:layout_gravity="center_vertical" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_10sdp" android:layout_width="wrap_content" android:text="@string/garowords" style="@style/MediumText"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView android:id="@+id/editors" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/_10sdp" android:layout_marginStart="@dimen/_26sdp" android:layout_marginTop="@dimen/_10sdp" android:layout_width="match_parent" android:visibility="visible" app:cardCornerRadius="@dimen/_5sdp" app:layout_constraintTop_toBottomOf="@+id/sentencesCard" tools:layout_editor_absoluteX="0dp">
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal" android:padding="@dimen/_5sdp">
+            <ImageView android:layout_height="@dimen/_40sdp" android:layout_width="@dimen/_40sdp" android:src="@drawable/ic_baseline_edit_24" app:tint="@color/colorAccent"/>
+            <TextView android:id="@+id/editorsText" android:layout_gravity="center_vertical" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_10sdp" android:layout_width="wrap_content" android:text="@string/fragment_home_editorsText_text" style="@style/MediumText"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView android:id="@+id/favWords" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/_60sdp" android:layout_marginLeft="@dimen/_10sdp" android:layout_marginRight="@dimen/_10sdp" android:layout_marginTop="@dimen/_10sdp" android:layout_width="match_parent" app:cardCornerRadius="@dimen/_5sdp" app:layout_constraintTop_toBottomOf="@+id/editors" tools:layout_editor_absoluteX="0dp">
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal" android:padding="@dimen/_5sdp">
+            <ImageView android:contentDescription="@string/image" android:layout_height="@dimen/_40sdp" android:layout_width="@dimen/_40sdp" android:src="@android:drawable/btn_star"/>
+            <TextView android:id="@+id/favorites" android:layout_gravity="center_vertical" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_10sdp" android:layout_width="wrap_content" android:text="@string/fragment_home_favorites_text" style="@style/MediumText"/>
+        </LinearLayout>
+        <Button android:background="@color/colorAccent" android:id="@+id/viewFavWords" android:layout_gravity="center_vertical" android:layout_height="wrap_content" android:layout_margin="@dimen/_5sdp" android:layout_weight="1" android:layout_width="match_parent" android:text="@string/fragment_home_viewFavWords_text" android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+</LinearLayout>

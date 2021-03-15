@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_height="wrap_content" android:layout_margin="@dimen/_2sdp" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_2sdp">
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical">
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
+        <!--WORD FROM-->
+        <LinearLayout android:id="@+id/wordTo" android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_15sdp" android:visibility="visible" >
+            <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
+
+                    <TextView android:background="@drawable/radiobackground" android:gravity="center_vertical" android:id="@+id/toWordLanguage" android:layout_gravity="center_vertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:padding="@dimen/_3sdp" android:text="@string/recycler_item_translated_word_toWordLanguage_text" android:textColor="@color/colorBlack" style="@style/MicroText"/>
+
+                    <ImageView android:backgroundTint="@color/colorPrimaryDark" android:contentDescription="@string/image" android:id="@+id/playAudioToWord" android:layout_height="@dimen/_25sdp" android:layout_width="@dimen/_25sdp" android:padding="@dimen/_2sdp" android:src="@drawable/ic_baseline_volume_off_24" android:visibility="visible" app:tint="@color/colorGray" tools:targetApi="lollipop" android:layout_marginStart="@dimen/_10sdp"/>
+                </LinearLayout>
+                <TextView android:fontFamily="sans-serif-black" android:id="@+id/toWord" android:layout_height="match_parent" android:layout_width="wrap_content" android:text="@string/recycler_item_translated_word_toWord_text" style="@style/WordText"/>
+            </LinearLayout>
+            <TextView android:fontFamily="serif" android:id="@+id/wordTypeToWord" android:layout_gravity="center_vertical" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/recycler_item_translated_word_wordTypeToWord_text" android:textColor="@color/colorBlack" android:textStyle="italic"/>
+            <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:contentDescription="@string/image" android:id="@+id/editToWordItem" android:layout_gravity="center_vertical" android:layout_height="@dimen/_20sdp" android:layout_width="@dimen/_20sdp" android:src="@drawable/ic_baseline_edit_24" android:visibility="gone" app:tint="@color/colorBlack"/>
+                <TextView android:id="@+id/userNameToWord" android:layout_gravity="center_vertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/recycler_item_translated_word_userNameToWord_text"/>
+            </LinearLayout>
+
+            <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:layout_height="match_parent" android:layout_marginTop="@dimen/_10sdp" android:layout_weight="1" android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:contentDescription="@string/image" android:id="@+id/voteUpToWord" android:layout_height="@dimen/_15sdp" android:layout_marginStart="@dimen/_2sdp" android:layout_width="@dimen/_15sdp" android:src="@drawable/ic_baseline_thumb_up_24" app:tint="@color/colorAccent"/>
+                <TextView android:id="@+id/noOfVotesToWord" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_8sdp" android:layout_width="wrap_content" android:text="@string/recycler_item_translated_word_noOfVotesToWord_text" style="@style/SmallText"/>
+                <ImageView android:contentDescription="@string/image" android:id="@+id/voteDownToWord" android:layout_height="@dimen/_15sdp" android:layout_marginStart="@dimen/_8sdp" android:layout_width="@dimen/_15sdp" android:src="@drawable/ic_baseline_thumb_down_24" app:tint="@color/colorGray"/>
+                <ImageView android:contentDescription="@string/image" android:id="@+id/reportToWord" android:layout_height="@dimen/_15sdp" android:layout_marginStart="@dimen/_8sdp" android:layout_width="@dimen/_15sdp" android:src="@drawable/ic_baseline_report_24" android:visibility="invisible" app:tint="@color/colorRed"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+        <LinearLayout android:id="@+id/wordMeaningsIfAny" android:layout_height="match_parent" android:layout_weight="1" android:layout_width="wrap_content" android:orientation="vertical" android:padding="@dimen/_15sdp" android:visibility="gone">
+            <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:text="Meaning" android:textStyle="italic" android:visibility="gone" style="@style/LargeText"/>
+            <TextView android:id="@+id/wordMeanings" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/recycler_item_translated_word_wordMeanings_text" android:textStyle="italic" style="@style/MediumText"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

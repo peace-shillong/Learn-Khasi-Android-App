@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:background="@color/colorBackground" android:layout_height="match_parent" android:layout_marginBottom="@dimen/_40sdp" android:layout_width="match_parent" android:orientation="vertical" tools:context=".ui.dashboard.DashboardFragment">
+    <ScrollView android:layout_height="wrap_content" android:layout_width="match_parent">
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical">
+    <androidx.cardview.widget.CardView android:id="@+id/letterLessons" android:layout_height="wrap_content" android:layout_margin="@dimen/_5sdp" android:layout_width="match_parent" android:padding="@dimen/_5sdp" android:visibility="visible" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.498" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/text_home">
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_5sdp">
+            <TextView android:fontFamily="serif" android:gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/lesson_1_khasi_letters" android:textSize="@dimen/_14sdp"/>
+            <Button android:background="@color/colorAccent" android:id="@+id/viewLettersBtn" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginTop="25dp" android:layout_width="match_parent" android:text="@string/view_khasi_letters" android:textColor="#fff"/>
+            <Button android:background="@color/colorAccent" android:id="@+id/listenBtn" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginTop="25dp" android:layout_width="match_parent" android:text="@string/listen_to_khasi_letters_pronunciation" android:textColor="#fff"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView android:id="@+id/wordsLessons" android:layout_height="wrap_content" android:layout_margin="@dimen/_5sdp" android:layout_width="match_parent" android:padding="@dimen/_5sdp" android:visibility="visible" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.498" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/text_home">
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_5sdp">
+            <TextView android:fontFamily="serif" android:gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/lesson_2_english_khasi_words" android:textSize="@dimen/_14sdp"/>
+            <Button android:background="@color/colorAccent" android:id="@+id/view3LettersBtn" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginTop="25dp" android:layout_width="match_parent" android:text="@string/view_3_letters_english_words" android:textColor="#fff"/>
+            <Button android:background="@color/colorAccent" android:id="@+id/view4LettersBtn" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginTop="25dp" android:layout_width="match_parent" android:text="@string/view_4_letters_english_words" android:textColor="#fff"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView android:id="@+id/sentencesLessons" android:layout_height="wrap_content" android:layout_margin="@dimen/_5sdp" android:layout_marginBottom="@dimen/_14sdp" android:layout_width="match_parent" android:padding="@dimen/_5sdp" android:visibility="visible" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.498" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/text_home">
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_5sdp">
+            <TextView android:fontFamily="serif" android:gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/lesson_3_english_khasi_sentences" android:textSize="@dimen/_14sdp"/>
+            <Button android:background="@color/colorAccent" android:id="@+id/greetings" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginTop="25dp" android:layout_width="match_parent" android:text="@string/view_english_khasi_greetings" android:textColor="#fff"/>
+            <Button android:background="@color/colorAccent" android:id="@+id/conversations" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginTop="25dp" android:layout_width="match_parent" android:text="@string/view_english_khasi_conversations" android:textColor="#fff"/>
+            <Button android:background="@color/colorAccent" android:id="@+id/directions" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginTop="25dp" android:layout_width="match_parent" android:text="@string/view_english_khasi_direction_sentences" android:textColor="#fff"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

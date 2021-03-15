@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="match_parent" android:layout_width="match_parent">
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:background="@color/colorBackground" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" tools:context=".ui.fragments.ProfileFragment">
+
+    <androidx.cardview.widget.CardView android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_10sdp" android:layout_marginRight="@dimen/_10sdp" android:layout_width="match_parent" app:cardCornerRadius="@dimen/_10sdp">
+        <LinearLayout android:id="@+id/singedIn" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_15sdp" android:visibility="visible">
+            <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:layout_height="wrap_content" android:layout_marginStart="@dimen/_2sdp" android:layout_weight="1" android:layout_width="match_parent" android:text="@string/title_profile" style="@style/LargeText"/>
+                <ImageView android:contentDescription="@string/image" android:gravity="center_vertical" android:id="@+id/settings" android:layout_height="@dimen/_30sdp" android:layout_width="@dimen/_30sdp" android:src="@drawable/ic_baseline_settings_24"/>
+            </LinearLayout>
+            <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
+                <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/photo" android:layout_height="@dimen/_40sdp" android:layout_margin="@dimen/_5sdp" android:layout_width="@dimen/_40sdp" android:src="@color/colorPrimary"/>
+                <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:id="@+id/name" android:layout_height="match_parent" android:layout_margin="@dimen/_5sdp" android:layout_width="match_parent" android:text="@string/hello_blank_fragment" android:textColor="@color/colorBlack" style="@style/MediumText"/>
+                    <TextView android:id="@+id/email" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_5sdp" android:layout_width="match_parent" android:text="@string/fragment_profile_email_text"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:background="@drawable/greenbg" android:id="@+id/badge" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_width="match_parent" android:padding="@dimen/_5sdp" android:text="@string/fragment_profile_badge_text" android:textColor="@color/colorWhite" style="@style/MediumText"/>
+            <TextView android:background="@drawable/greenbg" android:id="@+id/level" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_width="match_parent" android:padding="@dimen/_5sdp" android:text="@string/fragment_profile_level_text" android:textColor="@color/colorWhite" style="@style/MediumText"/>
+            <LinearLayout android:layout_height="wrap_content" android:layout_margin="@dimen/_5sdp" android:layout_width="match_parent" android:orientation="horizontal">
+                <androidx.cardview.widget.CardView android:layout_height="wrap_content" android:layout_margin="@dimen/_2sdp" android:layout_weight="1" android:layout_width="wrap_content" app:cardElevation="@dimen/_8sdp">
+                <LinearLayout android:id="@+id/pointsInfo" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:src="@drawable/trophy"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        app:tint="@color/colorGold"
+                        />
+                    <TextView android:gravity="center" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_width="match_parent" android:padding="@dimen/_5sdp" android:text="Points" android:textColor="@color/colorBlack" android:textStyle="bold" style="@style/MediumText"/>
+                    <TextView android:gravity="center" android:id="@+id/userPoints" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_width="match_parent" android:padding="@dimen/_5sdp" android:text="@string/fragment_profile_userPoints_text" android:textStyle="bold" style="@style/MediumText"/>
+                    <ImageView android:contentDescription="@string/image" android:id="@+id/infoPoints" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/_5sdp" android:layout_width="wrap_content" android:src="@drawable/ic_baseline_info_24"/>
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:layout_height="wrap_content" android:layout_margin="@dimen/_2sdp" android:layout_weight="1" android:layout_width="wrap_content" app:cardElevation="@dimen/_8sdp">
+                <LinearLayout android:id="@+id/levelInfo" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:src="@drawable/empire"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        app:tint="@color/colorRed"
+                        />
+                    <TextView android:gravity="center" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_width="match_parent" android:padding="@dimen/_5sdp" android:text="Level" android:textColor="@color/colorBlack" android:textStyle="bold" style="@style/MediumText"/>
+                    <TextView android:gravity="center" android:id="@+id/userLevel" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_width="match_parent" android:padding="@dimen/_5sdp" android:text="@string/fragment_profile_userLevel_text" android:textStyle="bold" style="@style/MediumText"/>
+                        <ImageView android:contentDescription="@string/image" android:id="@+id/infoLevel" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/_5sdp" android:layout_width="wrap_content" android:src="@drawable/ic_baseline_info_24"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <Button
+                android:id="@+id/upgradeLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/upgrade_level"
+                android:backgroundTint="@color/colorGold"
+                android:visibility="gone"
+                />
+            <LinearLayout android:background="@color/colorAccent" android:layout_height="@dimen/_2sdp" android:layout_width="match_parent"/>
+            <LinearLayout android:layout_height="wrap_content" android:layout_margin="@dimen/_5sdp" android:layout_width="match_parent" android:orientation="horizontal">
+                <androidx.cardview.widget.CardView android:layout_height="wrap_content" android:layout_margin="@dimen/_2sdp" android:layout_weight="1" android:layout_width="wrap_content" app:cardElevation="@dimen/_8sdp">
+                <LinearLayout android:id="@+id/userWords" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:src="@drawable/ic_baseline_chat_bubble"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        app:tint="@color/colorAccent"
+                        />
+                    <TextView android:gravity="center" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_width="match_parent" android:padding="@dimen/_5sdp" android:text="Words" android:textColor="@color/colorBlack" android:textStyle="bold" style="@style/MediumText"/>
+                    <TextView android:gravity="center" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_width="match_parent" android:padding="@dimen/_5sdp" android:text="List of words you added" android:textStyle="bold" style="@style/SmallText"/>
+                    <ImageView android:contentDescription="@string/image" android:id="@+id/infoUserWords" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/_5sdp" android:layout_width="wrap_content" android:src="@drawable/ic_baseline_info_24" android:visibility="gone"/>
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:layout_height="wrap_content" android:layout_margin="@dimen/_2sdp" android:layout_weight="1" android:layout_width="wrap_content" app:cardElevation="@dimen/_8sdp">
+                <LinearLayout android:id="@+id/userSentences" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:src="@drawable/ic_baseline_question_answer"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        app:tint="@color/colorSecondary"
+                        />
+                    <TextView android:gravity="center" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_width="match_parent" android:padding="@dimen/_5sdp" android:text="Sentences" android:textColor="@color/colorBlack" android:textStyle="bold" style="@style/MediumText"/>
+                    <TextView android:gravity="center" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_width="match_parent" android:padding="@dimen/_5sdp" android:text="List of sentences you added" android:textStyle="bold" style="@style/SmallText"/>
+                    <ImageView android:contentDescription="@string/image" android:id="@+id/infoUserSentences" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/_5sdp" android:layout_width="wrap_content" android:src="@drawable/ic_baseline_info_24" android:visibility="gone"/>
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout android:background="@color/colorAccent" android:layout_height="@dimen/_2sdp" android:layout_width="match_parent"/>
+            <LinearLayout android:layout_height="wrap_content" android:layout_margin="@dimen/_5sdp" android:layout_width="match_parent" android:orientation="horizontal">
+                <androidx.cardview.widget.CardView android:layout_height="wrap_content" android:layout_margin="@dimen/_2sdp" android:layout_weight="1" android:layout_width="wrap_content" app:cardElevation="@dimen/_8sdp">
+                <LinearLayout android:id="@+id/userReportedWords" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:src="@drawable/ic_baseline_chat_bubble"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        app:tint="@color/colorRed"
+                        />
+                    <TextView android:gravity="center" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_width="match_parent" android:padding="@dimen/_5sdp" android:text="Reported \nWords" android:textColor="@color/colorRed" android:textStyle="bold" style="@style/MediumText"/>
+                    <TextView android:gravity="center" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_width="match_parent" android:padding="@dimen/_5sdp" android:text="Reported words" style="@style/SmallText" android:textStyle="bold"/>
+                    <ImageView android:contentDescription="@string/image" android:id="@+id/infoUserReportedWords" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/_5sdp" android:layout_width="wrap_content" android:src="@drawable/ic_baseline_info_24"/>
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:layout_height="wrap_content" android:layout_margin="@dimen/_2sdp" android:layout_weight="1" android:layout_width="wrap_content" app:cardElevation="@dimen/_8sdp">
+                <LinearLayout android:id="@+id/userReportedSentences" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:src="@drawable/ic_baseline_question_answer"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        app:tint="@color/colorRed"
+                        />
+                    <TextView android:gravity="center" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_width="match_parent" android:padding="@dimen/_5sdp" android:text="Reported Sentences" android:textColor="@color/colorRed" android:textStyle="bold" style="@style/MediumText"/>
+                    <TextView android:gravity="center" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_width="match_parent" android:padding="@dimen/_5sdp" android:text="Reported sentences" style="@style/SmallText" android:textStyle="bold"/>
+                    <ImageView android:contentDescription="@string/image" android:id="@+id/infoUserReportedSentences" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/_5sdp" android:layout_width="wrap_content" android:src="@drawable/ic_baseline_info_24"/>
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <Button android:backgroundTint="@color/colorGray" android:id="@+id/signOut" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp" android:layout_width="match_parent" android:text="@string/fragment_profile_signOut_text" android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/singedOut" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_15sdp" android:visibility="gone">
+            <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/title_profile" style="@style/LargeText"/>
+            <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/you_are_not_signed_in"/>
+            <TextView android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp" android:layout_width="match_parent" android:text="@string/signin_intro" android:textColor="@color/colorBlack" style="@style/MediumText"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_10sdp" android:layout_marginRight="@dimen/_10sdp" android:layout_marginTop="@dimen/_10sdp" android:layout_width="match_parent" app:cardCornerRadius="@dimen/_10sdp">
+        <LinearLayout android:id="@+id/about" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_15sdp" android:visibility="visible">
+
+            <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
+                <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/logo" android:layout_height="@dimen/_60sdp" android:layout_margin="@dimen/_5sdp" android:layout_marginTop="@dimen/_12sdp" android:layout_width="@dimen/_60sdp" android:src="@drawable/logo"/>
+                <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:layout_height="match_parent" android:layout_margin="@dimen/_5sdp" android:layout_width="match_parent" android:text="@string/learn_khasi_app" android:textColor="@color/colorBlack" style="@style/MediumText"/>
+                    <TextView android:layout_height="wrap_content" android:layout_marginStart="@dimen/_5sdp" android:layout_width="match_parent" android:text="@string/intro"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:alpha="1" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_5sdp" android:layout_marginTop="@dimen/_12sdp" android:layout_width="match_parent" android:text="The app is made open to all in the community and we request everyone to be helpful, kind and take care while posting in the app, let's be responsible and encourage one another in doing what's good, right and helpful. To promote and safeguard our Local Language." android:textColor="@color/colorRed" android:textStyle="bold"/>
+            <TextView android:layout_height="wrap_content" android:layout_marginStart="@dimen/_5sdp" android:layout_marginTop="@dimen/_22sdp" android:layout_width="match_parent" android:text="Become a Sponsor" style="@style/LargeText"/>
+            <TextView android:layout_height="wrap_content" android:layout_marginStart="@dimen/_5sdp" android:layout_width="match_parent" android:text="@string/sponsor" style="@style/MediumText"/>
+            <TextView android:layout_height="wrap_content" android:layout_marginStart="@dimen/_5sdp" android:layout_marginTop="@dimen/_12sdp" android:layout_width="match_parent" android:text="If anyone is interested in collecting the Words and Sentences provided by users, they can find them in our github page and only the words and sentences are made available to the public, User's information isn't available for public view, as we respect user's privacy."/>
+            <Button android:backgroundTint="@color/colorAccent" android:id="@+id/donate" android:layout_height="wrap_content" android:layout_width="match_parent" android:onClick="visitDonateSite" android:text="@string/fragment_profile_donate_text" android:textColor="@color/colorWhite"/>
+            <Button android:id="@+id/learnDonate" android:layout_height="wrap_content" android:layout_width="match_parent" android:onClick="learnAboutDonate" android:text="learn more"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView android:layout_height="wrap_content" android:layout_marginBottom="@dimen/_40sdp" android:layout_marginLeft="@dimen/_10sdp" android:layout_marginRight="@dimen/_10sdp" android:layout_marginTop="@dimen/_10sdp" android:layout_width="match_parent" app:cardCornerRadius="@dimen/_10sdp">
+        <LinearLayout android:id="@+id/sngur" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_15sdp" android:visibility="visible">
+
+            <TextView android:gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/brought_to_you_by" style="@style/LargeText"/>
+                <ImageView android:contentDescription="@string/image" android:id="@+id/sngurLogo" android:layout_height="wrap_content" android:layout_width="match_parent" android:src="@drawable/sngur"/>
+                <TextView android:gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/image_info" style="@style/SmallText"/>
+            <LinearLayout android:gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:contentDescription="@string/image" android:id="@+id/fb" android:layout_height="@dimen/_40sdp" android:layout_marginEnd="@dimen/_10sdp" android:layout_width="@dimen/_40sdp" android:src="@drawable/fb_small"/>
+                <ImageView android:contentDescription="@string/image" android:id="@+id/ig" android:layout_height="@dimen/_40sdp" android:layout_marginEnd="@dimen/_10sdp" android:layout_marginStart="@dimen/_10sdp" android:layout_width="@dimen/_40sdp" android:src="@drawable/ig_small"/>
+                <ImageView android:contentDescription="@string/image" android:id="@+id/git" android:layout_height="@dimen/_40sdp" android:layout_marginStart="@dimen/_10sdp" android:layout_width="@dimen/_40sdp" android:src="@drawable/github"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+</ScrollView>

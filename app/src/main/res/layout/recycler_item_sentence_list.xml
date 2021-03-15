@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/sentenceItem" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_width="match_parent" app:cardCornerRadius="@dimen/_10sdp">
+<LinearLayout android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_5sdp">
+    <LinearLayout android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="horizontal">
+    <TextView android:id="@+id/fromSentence" android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="wrap_content" android:text="@string/recycler_item_sentence_list_fromSentence_text" style="@style/MediumText"/>
+
+    <TextView android:background="@drawable/radiobackground" android:id="@+id/fromSentenceLanguage" android:layout_height="wrap_content" android:layout_width="wrap_content" android:padding="@dimen/_3sdp" android:text="@string/eng" style="@style/MicroText"/>
+    </LinearLayout>
+    <LinearLayout android:backgroundTint="@color/colorGray" android:layout_height="@dimen/_2sdp" android:layout_marginTop="@dimen/_2sdp" android:layout_width="match_parent" android:orientation="horizontal"/>
+    <LinearLayout android:layout_height="match_parent" android:layout_marginTop="@dimen/_2sdp" android:layout_width="match_parent" android:orientation="horizontal">
+        <TextView android:id="@+id/category" android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="wrap_content" android:text="@string/recycler_item_sentence_list_category_text"/>
+        <TextView android:id="@+id/isTranslated" android:layout_height="wrap_content" android:layout_width="wrap_content" android:padding="@dimen/_3sdp" android:text="@string/recycler_item_sentence_list_isTranslated_text" android:textColor="@color/colorGray"/>
+    </LinearLayout>
+    <TextView android:gravity="start" android:id="@+id/userName" android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="wrap_content" android:text="@string/recycler_item_sentence_list_userName_text"/>
+</LinearLayout>
+</androidx.cardview.widget.CardView>

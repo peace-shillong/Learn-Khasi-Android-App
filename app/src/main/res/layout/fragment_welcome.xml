@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:gravity="center" android:layout_height="match_parent" android:layout_margin="@dimen/_15sdp" android:layout_width="match_parent" android:orientation="vertical" tools:context=".ui.welcome.WelcomeFragment">
+
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_margin="@dimen/_10sdp" android:layout_width="match_parent" android:orientation="horizontal">
+                <de.hdodenhof.circleimageview.CircleImageView android:gravity="center" android:layout_gravity="center" android:layout_height="@dimen/_70sdp" android:layout_width="@dimen/_70sdp" android:src="@drawable/logo"/>
+        <TextView android:gravity="center" android:layout_gravity="center" android:layout_height="match_parent" android:layout_marginStart="@dimen/_5sdp" android:layout_width="wrap_content" android:text="@string/app_name" style="@style/LargeText"/>
+        </LinearLayout>
+
+        <TextView android:fontFamily="serif" android:gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/welcome" style="@style/MediumText"/>
+        <TextView android:fontFamily="serif" android:gravity="center" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp" android:layout_width="match_parent" android:text="Are you new to the App?" style="@style/MediumText"/>
+        <Button android:backgroundTint="@color/colorAccent" android:id="@+id/yesBtn" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/_10sdp" android:layout_marginTop="@dimen/_10sdp" android:layout_width="match_parent" android:text="@string/fragment_welcome_yesBtn_text" android:textColor="@color/colorWhite" tools:targetApi="lollipop"/>
+        <Button android:backgroundTint="@color/colorGray" android:id="@+id/noBtn" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/fragment_welcome_noBtn_text" android:textColor="@color/colorWhite"/>
+
+
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_height="match_parent" android:layout_margin="@dimen/_5sdp" android:layout_width="match_parent" android:padding="@dimen/_5sdp" tools:context=".ui.activity.LessonSentencesActivity" android:orientation="vertical">
+    <include android:id="@+id/layout" layout="@layout/content_loading"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/lessonSentenceList" android:layout_height="wrap_content" android:layout_width="match_parent" android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbarFadeDuration="4" android:scrollbarStyle="outsideInset" android:scrollbars="vertical" tools:itemCount="25" tools:listitem="@layout/recycler_item_sentence_list"/>
+</LinearLayout>

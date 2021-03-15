@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+<LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" tools:context=".ui.activity.SettingsActivity">
+
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal" android:padding="@dimen/_14sdp">
+        <com.google.android.material.switchmaterial.SwitchMaterial android:checked="true" android:id="@+id/notificationOn" android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="0dp" android:text="@string/notifications" style="@style/MediumText"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal" android:padding="@dimen/_14sdp">
+        <com.google.android.material.switchmaterial.SwitchMaterial android:checked="true" android:id="@+id/safeSearch" android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="0dp" android:text="@string/safe_search" style="@style/MediumText"/>
+    </LinearLayout>
+
+    <LinearLayout android:background="@color/colorBackground" android:layout_height="@dimen/_2sdp" android:layout_width="match_parent"/>
+
+    <LinearLayout android:id="@+id/download" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_14sdp">
+        <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/download_dictionary" style="@style/MediumText"/>
+    </LinearLayout>
+
+    <LinearLayout android:background="@color/colorBackground" android:layout_height="@dimen/_2sdp" android:layout_width="match_parent"/>
+
+    <LinearLayout android:id="@+id/terms" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_14sdp">
+        <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/terms_and_conditions" style="@style/MediumText"/>
+    </LinearLayout>
+
+    <LinearLayout android:background="@color/colorBackground" android:layout_height="@dimen/_2sdp" android:layout_width="match_parent"/>
+
+    <LinearLayout android:id="@+id/privacy" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_14sdp">
+        <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/privacy_policy" style="@style/MediumText"/>
+    </LinearLayout>
+
+    <LinearLayout android:background="@color/colorBackground" android:layout_height="@dimen/_2sdp" android:layout_width="match_parent"/>
+
+    <LinearLayout android:id="@+id/donate" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_14sdp">
+        <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/donate" style="@style/MediumText"/>
+        <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/donate_info" style="@style/SmallText" android:textColor="@color/colorGray"/>
+    </LinearLayout>
+    <LinearLayout android:background="@color/colorBackground" android:layout_height="@dimen/_2sdp" android:layout_width="match_parent"/>
+    <LinearLayout android:id="@+id/version" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_14sdp">
+        <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/version" style="@style/MediumText"/>
+    </LinearLayout>
+    <LinearLayout android:background="@color/colorBackground" android:layout_height="@dimen/_2sdp" android:layout_width="match_parent"/>
+    <LinearLayout android:id="@+id/email" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_14sdp">
+        <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/email" style="@style/MediumText"/>
+    </LinearLayout>
+    <LinearLayout android:background="@color/colorBackground" android:layout_height="@dimen/_2sdp" android:layout_width="match_parent"/>
+    <LinearLayout android:id="@+id/displayLimit" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal" android:padding="@dimen/_14sdp" android:visibility="gone">
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_weight="1" android:text="Display limit" style="@style/MediumText"/>
+        <EditText android:id="@+id/limitNo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10" android:textColor="@color/colorBlack" android:inputType="number" android:layout_weight="1"/>
+        <Button android:id="@+id/setLimit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SET"/>
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

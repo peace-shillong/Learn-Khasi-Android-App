@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="@dimen/_16sdp">
+            <TextView android:id="@+id/dialogTitle" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/enter_your_translation" android:textAlignment="center" android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/translatedSentenceHint" android:layout_height="wrap_content" android:layout_width="match_parent">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/translatedSentence" android:inputType="textPersonName" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp" android:layout_width="match_parent" android:maxLines="1" android:text="@string/dialog_layout_answer_translatedSentence_text" style="@style/MediumText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout android:id="@+id/bigLevel" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/record_audio_clip_for_sentence" android:textAlignment="center" style="@style/SmallText"/>
+            <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageButton android:backgroundTint="@color/colorRed" android:contentDescription="@string/image" android:id="@+id/record" android:layout_height="@dimen/_40sdp" android:layout_width="@dimen/_40sdp" android:src="@drawable/ic_baseline_fiber_manual_record_24" tools:targetApi="lollipop"/>
+                <ImageButton android:backgroundTint="@color/colorRed" android:contentDescription="@string/image" android:id="@+id/pause" android:layout_height="@dimen/_40sdp" android:layout_width="@dimen/_40sdp" android:src="@drawable/ic_baseline_pause_24" android:visibility="gone"/>
+                <TextView android:id="@+id/recording" android:layout_gravity="center_vertical" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/_5sdp" android:layout_width="wrap_content" android:text="@string/dialog_layout_answer_recording_text" android:textColor="@color/colorRed" android:visibility="invisible"/>
+                <ImageButton android:backgroundTint="@color/colorAccent" android:contentDescription="@string/image" android:id="@+id/play" android:layout_height="@dimen/_40sdp" android:layout_width="@dimen/_40sdp" android:src="@drawable/ic_baseline_volume_up_24" tools:targetApi="lollipop"/>
+            </LinearLayout>
+            </LinearLayout>
+            <Button android:backgroundTint="@color/colorAccent" android:id="@+id/buttonAnswer" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_15sdp" android:layout_width="match_parent" android:text="@string/add_translation" android:textColor="#FFF" tools:targetApi="lollipop"/>
+        </LinearLayout>
+
+</ScrollView>
